@@ -56,7 +56,7 @@ var fling = window.fling || {};
          * @param {event} event the sender connected event.
          */
         onSenderConnected: function (event) {
-            console.log('onSenderConnected. Total number of senders: ' + Object.keys(self.getSenderList()).length);
+            console.log('onSenderConnected!');
         },
 
         /**
@@ -65,10 +65,7 @@ var fling = window.fling || {};
          * @param {event} event the sender disconnected event.
          */
         onSenderDisconnected: function (event) {
-            console.log('onSenderDisconnected. Total number of senders: ' + Object.keys(self.getSenderList()).length);
-            if (Object.keys(self.getSenderList()).length == 0) {
-                window.close();
-            }
+            console.log('onSenderDisconnected!');
         },
 
         /**
@@ -78,9 +75,9 @@ var fling = window.fling || {};
          * @param {string} message
          */
         onShow: function (senderId, message) {
-            console.log('****onShow****:' + message.file);
+            console.log('****onShow****: [' + message.file + "]");
 
-            $("#pic").attr("src",message.file);
+            $("#wall").css("backgroundImage", 'url(' + message.file + ')');
         },
     };
 
