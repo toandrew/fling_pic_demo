@@ -39,6 +39,7 @@ import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -424,7 +425,7 @@ public class FlingPicActivity extends ActionBarActivity {
     }
 
     private String getDefaultPicUrl() {
-        return "http://" + mIpAddress + ":" + DEFAULT_PORT + DEFAULT_PIC;
+        return "http://" + mIpAddress + ":" + DEFAULT_PORT + Environment.getExternalStorageDirectory() +"/"+ DEFAULT_PIC;
     }
 
     private void showToast(String text) {

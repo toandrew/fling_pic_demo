@@ -80,7 +80,7 @@ var fling = window.fling || {};
         onShow: function (senderId, message) {
             console.log('****onShow****:' + message.file);
 
-            $("#pic").src = message.file;
+            $("#pic").attr("src",message.file);
         },
     };
 
