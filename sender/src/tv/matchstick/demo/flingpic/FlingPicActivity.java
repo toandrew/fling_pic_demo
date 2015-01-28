@@ -61,7 +61,7 @@ public class FlingPicActivity extends ActionBarActivity {
 
     private static final String APP_URL = "http://toandrew.github.io/fling_pic_demo/receiver/index.html";
 
-    private static final String DEFAULT_PIC = "test.png";
+    private static final String DEFAULT_PIC = "test.jpg";
 
     private Button mSendBtn;
 

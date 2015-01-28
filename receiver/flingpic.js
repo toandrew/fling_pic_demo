@@ -78,7 +78,7 @@ var fling = window.fling || {};
          * @param {string} message
          */
         onShow: function (senderId, message) {
-            console.log('****onShow****:' + message);
+            console.log('****onShow****:' + message.file);
 
             $("#pic").src = message.file;
         },
